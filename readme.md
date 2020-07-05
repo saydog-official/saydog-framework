@@ -1,5 +1,5 @@
 
-[![Build](https://img.shields.io/badge/SaydogFramework-1.3-brightgreen.svg?maxAge=259200)]()
+[![Build](https://img.shields.io/badge/SaydogFramework-1.4-brightgreen.svg?maxAge=259200)]()
 [![Stage](https://img.shields.io/badge/Release-Stable-brightgreen.svg)]()
 [![Build](https://img.shields.io/badge/Supported_Android-Linux-orange.svg)]()
 [![Build](https://img.shields.io/badge/Available-Termux-red.svg?maxAge=259200)]()
@@ -37,6 +37,7 @@ Developers assume no liability and are not responsible for any misuse or damage 
 - Tcp scanner
 - Instagram bruteforce
 - Facebook bruteforce
+- Gmail bruteforce
 - Bulk facebook checker
 
 ## Installation
@@ -45,11 +46,6 @@ Instructions on how to install *Saydog Framework*
 git clone https://github.com/saydog-official/saydog-framework.git
 cd saydog-framework
 chmod +x setup && ./setup
-```
-### Uninstall
-```bash
-cd saydog-framework
-saydog uninstall
 ```
 
 ## Tools Overview
