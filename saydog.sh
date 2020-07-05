@@ -135,6 +135,12 @@ install() {
                         echo -e $p"[*]"$w" installing which package"
                         pkg install -y debianutils &> /dev//null
                         fi
+                if [ -f /data/data/com.termux/files/usr/bin/espeak ]; then
+                        echo -e $p"[*]"$w" espeak is already exists!"
+                else
+                        echo -e $p"[*]"$w" installing espeak package"
+                        pkg install -y espeak &> /dev//null
+                        fi
                 if [ -f /data/data/com.termux/files/usr/bin/msfconsole ]; then
                         echo -e $p"[*]"$w" metasploit is already exists!"
                 else
