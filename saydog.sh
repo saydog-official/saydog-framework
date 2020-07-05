@@ -149,6 +149,7 @@ install() {
         echo
         pip2 install requests mechanize uncompyle6 &> /dev//null
         python3 -m pip install --upgrade pip &> /dev//null
+        python3 -m pip install yagmail &> /dev//null
         python3 -m pip install -r requirements.txt &> /dev//null
         python3 -m pip list
         echo
