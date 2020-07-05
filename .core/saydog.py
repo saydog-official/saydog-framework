@@ -219,14 +219,6 @@ if "__main__" == __name__:
         if "--run" in sys.argv:
                 from subprocess import call
                 os.system("clear;espeak -s140 -ven+18 -z 'Welcome to the saydog framework version 1.4.0 for more information about this tool just type help' &")
-                print ("")
-                print (p+" SAYDOG FRAMEWORK ")
-                print (w+"------------------")
-                print (w+" Welcome to the saydog framework version 1.4.0")
-                print (w+" For more information about this tool just type 'help'")
-                print ("")
-                time.sleep(8)
-                print (b+"[+]"+w+" Starting the saydog-framework console")
                 os.system('curl -s ifconfig.co > main/ip.txt;clear')
                 display()
         else:
