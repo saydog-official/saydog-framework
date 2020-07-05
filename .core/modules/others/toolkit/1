@@ -1,0 +1,10 @@
+import os,sys,time
+
+def package():
+        try:
+                import gnupg
+                import zip
+        except ImportError:
+                os.system('apt install -y gnupg zip &> /dev//null')
+
+package()

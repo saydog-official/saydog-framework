@@ -1,0 +1,1 @@
+cp saydog.sh ~/../usr/bin/saydog && chmod +x ~/../usr/bin/saydog && saydog install

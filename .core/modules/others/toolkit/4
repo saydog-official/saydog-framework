@@ -1,0 +1,2 @@
+
+os.system('gpg --batch -c --passphrase 

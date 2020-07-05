@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*-
+import os,sys,time
+import socket,struct
+try:
+        import yagmail
+except ImportError:
+        os.system("python3 -m pip install yagmail &> /dev//null")

