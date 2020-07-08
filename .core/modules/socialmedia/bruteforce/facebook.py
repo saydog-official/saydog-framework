@@ -195,7 +195,6 @@ def menu():
                         os.system('python2 multi-bruteforce.py')
                         print("\r\n")
                         print(b+"[+]"+w+" Result saved as:- "+g+"result/mbf_result.txt"+w)
-                        print("")
                         menu()
                 elif dog == '3':
                         global fbcheck
