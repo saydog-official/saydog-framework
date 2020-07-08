@@ -93,7 +93,7 @@ def masscrack():
                         else:
                                 gagal.append(username)
                                 back +=1
-                                sys.stdout.write('\r'+b+'[+]'+w+' Cracking ('+p+str(back)+w+'/'+p+str(len(up))+w+') live ('+g+str(len(berhasil))+w+') check ('+y+str(len(cekpoint))+w+') failed ('+r+str(len(gagal))+w+')');sys.stdout.flush()
+                                sys.stdout.write('\r\n'+b+'[+]'+w+' Cracking ('+p+str(back)+w+'/'+p+str(len(up))+w+') live ('+g+str(len(berhasil))+w+') check ('+y+str(len(cekpoint))+w+') failed ('+r+str(len(gagal))+w+')');sys.stdout.flush()
         except IOError:
                 print r+"[!ERROR]"+w+" Something error please try again"
                 time.sleep(1)
