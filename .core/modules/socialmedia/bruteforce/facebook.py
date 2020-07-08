@@ -748,7 +748,7 @@ def getid():
                         idt.append(a['id'])
                         sv.write(a['id'] + '\n')
                 sv.close()
-                os.system("sed '1d' ../../../../result/id_friends.txt > out.txt;sed '1d' out.txt > out;cat out > ../../../../result/id_friends.txt;rm -rf out.txt out")
+                os.system("sed '1d' ../../../../result/id_friends.txt > out.txt;sed '1d' out.txt > outs.txt;cat outs.txt > ../../../../result/id_friends.txt;rm -rf out.txt outs.txt")
                 print b+"[+]"+w+" Total ID:-"+g+" %s" %(len(idt))
                 print g+"[+]"+w+" File saved as:- "+g+"result/id_friends.txt"+w
                 print
