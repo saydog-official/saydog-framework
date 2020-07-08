@@ -184,7 +184,8 @@ def menu():
                 print w+'{'+p+'01'+w+'} Auto bruteforce target'
                 print w+'{'+p+'02'+w+'} Multi bruteforce from file'
                 print w+'{'+p+'03'+w+'} Bulk facebook checker'
-                print w+'{'+p+'04'+w+'} Logout sessions'
+                print w+'{'+p+'04'+w+'} Dump id from friend list'
+                print w+'{'+p+'05'+w+'} Logout sessions'
                 print w+'{'+p+'00'+w+'} Back'
                 print
                 dog = raw_input(r+'saydog'+w+':'+p+'/facebook/'+w+'> ')
@@ -218,6 +219,8 @@ def menu():
                         except KeyboardInterrupt:
                                 sys.exit(1)
                 elif dog == '4':
+                        getid()
+                elif dog == '5':
                         print
                         print r+'[!]'+w+' Removing access token from:- '+g+'socialmedia/bruteforce/login.txt'+w
                         time.sleep(3)
@@ -725,6 +728,57 @@ def start1():
                 pass
         print
         brute()
+
+def getid():
+        idt = []
+        try:
+                toket=open('login.txt','r').read()
+        except IOError:
+                os.system('rm -rf login.txt')
+                time.sleep(1)
+                login()
+        try:
+                r=requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
+                z=json.loads(r.text)
+                print
+                print b+'[+]'+w+' Trying to get ID Friends'
+                time.sleep(3)
+                sv = open('../../../../result/id_friends.txt','w')
+                for a in z['data']:
+                        idt.append(a['id'])
+                        sv.write(a['id'] + '\n')
+                sv.close()
+                os.system("sed '1d' ../../../../result/id_friends.txt > out.txt;sed '1d' out.txt > out;cat out > ../../../../result/id_friends.txt;rm -rf out.txt out")
+                print b+"[+]"+w+" Total ID:-"+g+" %s" %(len(idt))
+                print g+"[+]"+w+" File saved as:- "+g+"result/id_friends.txt"+w
+                print
+                dog = raw_input('[ enter ]')
+                menu()
+        except IOError:
+                print r+"[!ERROR]"+w+" No such file or directory"
+                menu()
+        except (KeyboardInterrupt,EOFError):
+                sys.exit(1)
+        except KeyError:
+                print
+                print r+'[!ERROR]'+w+' Something wrong, please try again'
+                print r+'[!ERROR]'+w+' Removing access token'
+                os.system('rm -rf login.txt')
+                print
+                dog = raw_input('[ enter ]')
+                if dog == '':
+                        sys.exit(1)
+                else:
+                        sys.exit(1)
+        except requests.exceptions.ConnectionError:
+                print r+'[!ERROR]'+w+' Connection error, please try again'
+                print
+                dog = raw_input('[ enter ]')
+                if dog == '':
+                        sys.exit(1)
+                else:
+                        sys.exit(1)
+
 
 def main():
         try:
