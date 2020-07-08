@@ -110,6 +110,7 @@ def hasil():
 def main():
         try:
                 crack()
+                print ("")
         except KeyboardInterrupt:
                 sys.exit(1)
 
