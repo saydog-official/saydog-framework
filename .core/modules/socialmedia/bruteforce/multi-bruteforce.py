@@ -101,7 +101,7 @@ def masscrack():
                 print r+"[!]"+w+" Connection error please try again later"
 
 def hasil():
-        dog = raw_input(w+'\n'+b+'[+]'+w+' Press (enter) for back to socialmedia menu')
+        dog = raw_input(w+'\r\n'+b+'[+]'+w+' Press (enter) for back to socialmedia menu')
         if dog == '':
                 sys.exit(1)
         else:
