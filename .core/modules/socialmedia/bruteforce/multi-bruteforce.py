@@ -42,6 +42,9 @@ def crack():
         if idlist = "result/id_friends.txt":
                 idlist = "../../../../result/id_friends.txt"
                 pass
+        else:
+                idlist = idlist
+                pass
         passw = raw_input(b+'[+]'+w+' Password: ')
         try:
                 file = open((idlist), "r")
