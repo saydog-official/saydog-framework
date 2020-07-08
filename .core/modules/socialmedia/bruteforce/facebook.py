@@ -193,6 +193,7 @@ def menu():
                         start1()
                 elif dog == '2':
                         os.system('python2 multi-bruteforce.py')
+                        print("\r\n")
                         print(b+"[+]"+w+" Result saved as:- "+g+"result/mbf_result.txt"+w)
                         print("")
                         menu()
