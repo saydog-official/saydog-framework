@@ -39,7 +39,7 @@ def crack():
                 login()
         print
         idlist = raw_input(b+'[+]'+w+' File ID : ')
-        if idlist = "result/id_friends.txt":
+        if idlist == "result/id_friends.txt":
                 idlist = "../../../../result/id_friends.txt"
                 pass
         else:
