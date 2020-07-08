@@ -193,6 +193,7 @@ def menu():
                         start1()
                 elif dog == '2':
                         os.system('python2 multi-bruteforce.py')
+                        menu()
                 elif dog == '3':
                         global fbcheck
                         try:
