@@ -55,7 +55,7 @@ def main():
                         filehandle.close()
                         sv = str(input(B+"[+]"+W+" save file to (ex: /sdcard): "))
                         os.system("cat ../../../../result/pass.txt > /"+sv+"/pass.txt")
-                        print(B+"[+]"+W+" file saved as:- \033[32;1m"+sv+W)
+                        print(B+"[+]"+W+" file saved as:- \033[32;1m"+sv+"/pass.txt"+W)
                         print (W)
                         dog = str(input("[ enter ]"))
                         if dog == "":
