@@ -88,7 +88,7 @@ def menu():
         except KeyboardInterrupt:
             print
             dog = raw_input(w+'[ enter ]')
-            sys.exit(1)
+            sys.exit(0)
         except IOError as KeyError:
             print r+'[!ERROR]'+w+' Something wrong, please try again'
             os.system('rm -f login.txt')
