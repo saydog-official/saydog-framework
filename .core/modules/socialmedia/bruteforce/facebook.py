@@ -185,7 +185,8 @@ def menu():
                 print w+'{'+p+'02'+w+'} Multi bruteforce from file'
                 print w+'{'+p+'03'+w+'} Bulk facebook checker'
                 print w+'{'+p+'04'+w+'} Dump id from friend list'
-                print w+'{'+p+'05'+w+'} Logout sessions'
+                print w+'{'+p+'05'+w+'} Yahoo clone scanner'
+                print w+'{'+p+'06'+w+'} Logout sessions'
                 print w+'{'+p+'00'+w+'} Back'
                 print
                 dog = raw_input(r+'saydog'+w+':'+p+'/facebook/'+w+'> ')
@@ -224,6 +225,8 @@ def menu():
                 elif dog == '4':
                         getid()
                 elif dog == '5':
+                        os.system('python2 yahoo.py')
+                elif dog == '6':
                         print
                         print r+'[!]'+w+' Removing access token from:- '+g+'socialmedia/bruteforce/login.txt'+w
                         time.sleep(3)
