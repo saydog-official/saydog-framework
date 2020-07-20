@@ -226,6 +226,7 @@ def menu():
                         getid()
                 elif dog == '5':
                         os.system('python2 yahoo.py')
+                        menu()
                 elif dog == '6':
                         print
                         print r+'[!]'+w+' Removing access token from:- '+g+'socialmedia/bruteforce/login.txt'+w
