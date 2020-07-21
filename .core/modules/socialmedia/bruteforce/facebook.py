@@ -726,9 +726,8 @@ def start1():
         extra = raw_input('Do you want to add extra wordlist from file? (y/n) ')
         if extra == 'y' or extra == 'Y':
                 print
-                extra = raw_input(b+'[+]'+w+' input file: ')
-                file = extra
-                os.system('cat '+file+' >> wordlist.txt')
+                filex = raw_input(b+'[+]'+w+' input file: ')
+                os.system('cat '+filex+' >> wordlist.txt')
                 print b+'[+]'+w+' Bruteforce is running'
                 pass
         else:
