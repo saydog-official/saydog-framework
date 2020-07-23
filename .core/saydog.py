@@ -217,9 +217,14 @@ def main():
 ###################### main argv ####################
 if "__main__" == __name__:
         if "--run" in sys.argv:
-                from subprocess import call
-                os.system("clear;espeak -s140 -ven+18 -z 'Welcome to the saydog framework version 1.4.0 for more information about this tool just type help' &")
-                os.system('curl -s ifconfig.co > main/ip.txt;clear')
-                display()
+            try:
+                with open("main/ip.txt") as f:
+                    os.system("curl -s ifconfig.co > main/ip.txt")
+                    if "<!DOCTYPE" in f.read():
+                        print(r+"[*]"+w+" Weak internet connection, please try again")
+                    else:
+                        display()
+            except KeyboardInterrupt:
+                sys.exit(1)
         else:
-                os.system("saydog")
+                sys.exit(1)
