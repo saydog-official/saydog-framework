@@ -187,7 +187,7 @@ def menu():
                         os.system("proot apktool241 b "+tmp+" -o original.apk &> /dev//null;rm -rf "+tmp+"/")
                         print (b+"[+]"+w+" auto generate keystore using apksigner")
                         print (b+"[+]"+w+" signing original apk using apksigner")
-                        os.system("apksigner -p android keystore original.apk "+tmp+"-injected.apk &> /dev//null;rm -rf original.apk")
+                        os.system("apksigner -p android keystore original.apk "+tmp+"-injected.apk;rm -rf original.apk")
                         print (g+"[+]"+w+" successfully signing original apk file")
                         print (g+"[+]"+w+" android payload has been generated")
                         print ("")
