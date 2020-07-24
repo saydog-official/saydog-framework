@@ -187,7 +187,19 @@ def menu():
                         os.system("proot apktool241 b "+tmp+" -o original.apk &> /dev//null;rm -rf "+tmp+"/")
                         print (b+"[+]"+w+" auto generate keystore using apksigner")
                         print (b+"[+]"+w+" signing original apk using apksigner")
-                        os.system("proot apk-signer -k keystore.jks -a android -s google -f app.apk -o "+tmp+"-injected.apk;rm -rf original.apk")
+                        os.system("proot apk-signer -k keystore.jks -a android -s google -f original.apk -o "+tmp+"-injected.apk &> /dev//null;rm -rf original.apk")
+                        check = tmp+"-injected.apk"
+                        if os.path.isfile(check):
+                            pass
+                        else:
+                            print(r+"[!]"+w+" Failed to sign apk file, please try again")
+                            print("")
+                            os.system("pkg install -y proot &> /dev//null")
+                            dog = str(input("[ enter ]"))
+                            if dog == "":
+                                    sys.exit(0)
+                            else:
+                                    sys.exit(0)
                         print (g+"[+]"+w+" successfully signing original apk file")
                         print (g+"[+]"+w+" android payload has been generated")
                         print ("")
