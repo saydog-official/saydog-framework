@@ -187,7 +187,7 @@ def menu():
                         os.system("proot apktool241 b "+tmp+" -o original.apk &> /dev//null;rm -rf "+tmp+"/")
                         print (b+"[+]"+w+" auto generate keystore using apksigner")
                         print (b+"[+]"+w+" signing original apk using apksigner")
-                        os.system("proot apk-signer -k my.keystore -f original.apk -a android -s google -o "+tmp+"-injected.apk &> /dev//null;rm -rf original.apk")
+                        os.system("proot apk-signer -k keystore.jks -a android -s google -f app.apk -o "+tmp+"-injected.apk &> /dev//null;rm -rf original.apk")
                         check = tmp+"-injected.apk"
                         if os.path.isfile(check):
                             pass
