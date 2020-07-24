@@ -61,6 +61,11 @@ install() {
                         echo -e $p"[*]"$w" installing java package"
                         wget https://raw.githubusercontent.com/MasterDevX/java/master/installjava &> /dev//null && bash installjava &> /dev//null
                         fi
+                if [ -f /data/data/com.termux/files/usr/bin/npm ]; then
+                        echo -e $p"[*]"$w" nodejs-lts is already exists!"
+                else
+                        echo -e $p"[*]"$w" installing nodejs-lts package"
+                        pkg install -y nodejs-lts &> /dev//null
                 if [ -f /data/data/com.termux/files/usr/bin/apktool ]; then
                         echo -e $p"[*]"$w" apktool is already exists!"
                 else
@@ -69,11 +74,11 @@ install() {
                         wget -O apktool.jar https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.3.4.jar &> /dev//null;mv apktool.jar ~/../usr/bin;chmod +x ~/../usr/bin/apktool.jar
                         wget -O apktool241 https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool &> /dev//null;wget -O apktool241.jar https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar &> /dev//null;mv apktool241 ~/../usr/bin;mv apktool241.jar ~/../usr/bin;chmod +x ~/../usr/bin/apktool241;chmod +x ~/../usr/bin/apktool241.jar
                         fi
-                if [ -f /data/data/com.termux/files/usr/bin/apksigner ]; then
-                        echo -e $p"[*]"$w" apksigner is already exists!"
+                if [ -f /data/data/com.termux/files/usr/bin/apk-signer ]; then
+                        echo -e $p"[*]"$w" apk-signer is already exists!"
                 else
-                        echo -e $p"[*]"$w" installing apksigner package"
-                        pkg install -y apksigner &> /dev//null
+                        echo -e $p"[*]"$w" installing apk-signer package"
+                        npm install -g apk-signer &> /dev//null
                         fi
                 if [ -f /data/data/com.termux/files/usr/bin/python ]; then
                         echo -e $p"[*]"$w" python is already exists!"
