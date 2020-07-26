@@ -41,15 +41,15 @@ def menu():
                         pass
                 elif dog == "2" or dog == "02":
                         fmt = "perl"
-                        ext = "pl"
+                        ext = "sh"
                         pass
                 elif dog == "3" or dog == "03":
                         fmt = "python"
-                        ext = "py"
+                        ext = "sh"
                         pass
                 elif dog == "4" or dog == "04":
                         fmt = "ruby"
-                        ext = "rb"
+                        ext = "sh"
                         pass
                 else:
                         sys.exit(1)
