@@ -106,6 +106,7 @@ def display():
                 logo = [logo1,logo2,logo3]
                 logo = random.choice(logo)
                 print (logo)
+                os.system("espeak -s140 -ven+18 -z 'Welcome to the saydog framework console, for more information about this tool just type help'")
                 print ("\033[41m  \033[00m Welcome to the:-"+g+" saydog framework version 1.4.0"+w)
                 print ("\033[44m  \033[00m This is you're public address:-"+p,f.readline().strip()+w)
                 print ("\033[45m  \033[00m Starting console at:-",datetime.today().strftime('%d-%m-%Y Time:- %H:%M:%S'))
@@ -223,7 +224,6 @@ if "__main__" == __name__:
                     if "<!DOCTYPE" in f.read():
                         print(r+"[*]"+w+" Weak internet connection, please try again")
                     else:
-                        os.system("espeak -s140 -ven+18 -z 'Welcome to the saydog framework console, for more information about this tool just type help'")
                         display()
             except KeyboardInterrupt:
                 sys.exit(1)
