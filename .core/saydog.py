@@ -223,6 +223,7 @@ if "__main__" == __name__:
                     if "<!DOCTYPE" in f.read():
                         print(r+"[*]"+w+" Weak internet connection, please try again")
                     else:
+                        os.system("espeak -s140 -ven+18 -z 'Welcome to the saydog framework console, for more information about this tool just type help'")
                         display()
             except KeyboardInterrupt:
                 sys.exit(1)
