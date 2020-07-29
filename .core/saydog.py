@@ -4,7 +4,6 @@ import sys
 import time
 import requests
 import yagmail
-import uncompyle6
 import random
 #################### fonts colors ####################
 w="\033[00m"
