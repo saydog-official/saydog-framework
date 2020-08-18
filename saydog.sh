@@ -61,6 +61,12 @@ install() {
                         echo -e $p"[*]"$w" installing java package"
                         wget https://raw.githubusercontent.com/MasterDevX/java/master/installjava &> /dev//null && bash installjava &> /dev//null
                         fi
+                if [ -f /data/data/com.termux/files/usr/bin/aapt ]; then
+                        echo -e $p"[*]"$w" aapt is already exists!"
+                else
+                        echo -e $p"[*]"$w" installing aapt package"
+                        pkg install -y aapt &> /dev//null
+                        fi
                 if [ -f /data/data/com.termux/files/usr/bin/npm ]; then
                         echo -e $p"[*]"$w" nodejs-lts is already exists!"
                 else
