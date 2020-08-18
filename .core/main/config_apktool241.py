@@ -4,7 +4,7 @@ def rename():
 	if "jarfile=apktool.jar" in cek:
 		pass
 	else:
-		pass
+		sys.exit(1)
 	replaces = {"jarfile=apktool.jar":"jarfile=apktool241.jar"}
 	for line in fileinput.input("../usr/bin/apktool241", inplace=True):
 		for search in replaces:
