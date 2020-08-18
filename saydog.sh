@@ -53,7 +53,7 @@ install() {
                         echo -e $p"[*]"$w" proot is already exists!"
                 else
                         echo -e $p"[*]"$w" installing proot package"
-                        pkg install -y proot &> /dev//null
+                        pkg install -y proot wget &> /dev//null
                         fi
                 if [ -f /data/data/com.termux/files/usr/bin/java ]; then
                         echo -e $p"[*]"$w" java is already exists!"
