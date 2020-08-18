@@ -154,7 +154,7 @@ def main():
         print (b+"[+]"+w+" downloading files from database")
         print (b+"[+]"+w+" this could take a while")
         time.sleep(2)
-        os.system("wget -O /"+outp+"/"+name+".apk https://github.com/saydog/vdapp/raw/master/"+apkname+" &> /dev//null")
+        os.system("wget -O /"+outp+"/"+name+".apk https://github.com/saydog-official/database/raw/master/android/infected/"+apkname+" &> /dev//null")
         print (g+"[+]"+w+" download successfully")
         print (g+"[+]"+w+" file saved as:- "+g+outp+"/"+name+".apk")
         dog = str(input(b+"[+]"+w+" press (enter) for back to main menu "))
