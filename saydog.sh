@@ -164,6 +164,7 @@ install() {
         python3 -m pip install yagmail &> /dev//null
         python3 -m pip install -r requirements.txt &> /dev//null
         python3 -m pip list
+        python3 ~/saydog-framework/.core/main/config_apktool241.py
         echo
         echo -e $g"[*]"$w" All dependencies successfuly installed"
         echo -e $g"[*]"$w" thank you for installing saydog-framework :D"
