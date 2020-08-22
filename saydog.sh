@@ -73,7 +73,7 @@ install() {
                         echo -e $p"[*]"$w" installing nodejs-lts package"
                         pkg install -y nodejs-lts &> /dev//null
                         fi
-                if [ -f /data/data/com.termux/files/usr/bin/apktool ]; then
+                if [ -f /data/data/com.termux/files/usr/bin/apktool241 ]; then
                         echo -e $p"[*]"$w" apktool is already exists!"
                 else
                         echo -e $p"[*]"$w" installing apktool package"
