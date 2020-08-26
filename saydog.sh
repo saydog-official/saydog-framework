@@ -180,7 +180,7 @@ install() {
 }
 
 update() {
-        bash ~/saydog-framework/update.sh
+        cd ~/saydog-framework/;bash update.sh
 }
 #################### main argv ####################
 
