@@ -44,7 +44,7 @@ def inject():
         a3 = a2.replace(".apk","")
         pathsmali = os.popen("find -O3 -L "+a3+" -name '*Activity.smali'").read()
         if "MainActivity.smali" in pathsmali:
-            pathsmali = os.popen("find -O3 -L "+a3+" -name 'MainActivity.smali'").readline()
+            pathsmali = os.popen("find -O3 -L "+a3+" -name 'MainActivity.smali'").readline().strip()
             print(w+"----------------------------------------------------")
             print(g+"[✓]"+w+" package name is obtained:-"+y,pkgname)
             print(g+"[✓]"+w+" activity detected:-"+y,pkgactivity)
