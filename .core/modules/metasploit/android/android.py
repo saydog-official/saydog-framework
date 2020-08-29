@@ -82,7 +82,7 @@ def inject():
             else:
                 print(r+"[!]"+w+" file activity smali doesnt exist !")
                 sys.exit(1)
-        a4 = PurePath(pathsmali.replace("\n",""))
+        a4 = PurePath(pathsmali)
         dirsmali = (a4.parts[0]+"/"+a4.parts[1]+"/"+a4.parts[2]+"/")
         print(g+"[✓]"+w+" target directories:-"+y,dirsmali)
         hooksmali = a4.parts[2]
