@@ -49,6 +49,7 @@ def inject():
             print(g+"[✓]"+w+" package name is obtained:-"+y,pkgname)
             print(g+"[✓]"+w+" activity detected:-"+y,pkgactivity)
             print(g+"[✓]"+w+" smali file:- "+y+pathsmali)
+            pass
         else:
             print(r+"[!]"+w+" main.activity smali doesnt exist, you can choose manually")
             print("----------------------------------------------------\n\n"+y+pathsmali+w+"\n----------------------------------------------------")
