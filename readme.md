@@ -9,8 +9,8 @@
 ![Banner](https://raw.githubusercontent.com/saydog-official/saydog-framework/master/data/saydogframework.jpg)
 
 **Saydog Framework** is an exploiting tool which compiles a malware with famous payload, and then the compiled maware can be executed on Android. **Saydog Framework** Provides An Easy way to create Backdoors. 
- ## Full tutorial
-YouTube: [click here](https://youtu.be/ONnId7ypObo)
+
+
  ## Information
  This tool is for educational purpose only, usage for attacking targets without prior mutual consent is illegal.
 Developers assume no liability and are not responsible for any misuse or damage cause by this program.
