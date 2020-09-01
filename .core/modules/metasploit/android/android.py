@@ -111,6 +111,7 @@ def embed():
         os.system("rm -rf payload &> /dev//null")
         pass
     if os.path.isfile("port"):
+        os.system("rm -rf payload.apk &> /dev//null")
         port = open("port").readline().strip()
         pass
     else:
