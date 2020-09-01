@@ -197,7 +197,7 @@ def embed():
     print(b+"[+]"+w+" using injection:- "+y+paymsf)
     os.system("cp -r "+paymsf+" "+str(dirsmali))
     if os.path.isdir(str(dirsmali)+"/metasploit"):
-        print(g+"[✓]"+w+" injection succesfully:- "+y+str(dirsmali)+"/metasploit")
+        print(g+"[✓]"+w+" injection succesfully:- "+y+str(dirsmali)+"metasploit")
         pass
     else:
         print(r+"[!]"+w+" injection failed, please check your directories")
