@@ -310,6 +310,15 @@ def mainlist():
     os.system("wget https://github.com/saydog-official/database/raw/master/android/template/"+tmp+".zip &> /dev//null")
     print(b+"[+]"+w+" decompiling apk file using apktol 2.3.4")
     os.system("unzip "+tmp+".zip &> /dev//null;rm -rf "+tmp+".zip")
+    if os.path.isfile("host"):
+        if os.path.isfile("port"):
+            host = open("host").readline().strip()
+            port = open("port").readline().strip()
+            pass
+        else:
+            pass
+    else:
+        pass
     if os.path.isfile("payload.apk"):
         ask = str(input(b+"[+]"+w+" do you want to use the previous payload ? (y/n) "))
         if ask == "y" or ask == "Y":
