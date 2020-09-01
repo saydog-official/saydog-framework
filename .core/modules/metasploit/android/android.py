@@ -328,6 +328,7 @@ def mainlist():
             port = open("port").readline().strip()
             pass
         else:
+            os.system("rm -rf payload payload.apk &> /dev//null")
             pass
     else:
         pass
