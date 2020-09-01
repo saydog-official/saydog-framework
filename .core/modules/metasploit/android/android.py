@@ -108,6 +108,7 @@ def embed():
         host = open("host").readline().strip()
         pass
     else:
+        os.system("rm -rf payload &> /dev//null")
         pass
     if os.path.isfile("port"):
         port = open("port").readline().strip()
