@@ -5,5 +5,5 @@ idna==2.9
 requests==2.23.0
 spark-parser==1.8.9
 uncompyle6==3.7.1
-urllib3==1.25.9
+urllib3==1.26.5
 xdis==4.7.0
